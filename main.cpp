@@ -6,6 +6,7 @@ using namespace std;
 struct Engine {
     GLFWwindow* window;
     int WIDTH = 800, HEIGHT = 600;
+    
 
     Engine() {
         // wake up GLFW
@@ -15,7 +16,7 @@ struct Engine {
         }
 
         // ask the operating system for a window
-        window = glfwCreateWindow(WIDTH, HEIGHT, "subscribe to kavan xD", nullptr, nullptr);
+        window = glfwCreateWindow(WIDTH, HEIGHT, "HIIIIII", nullptr, nullptr);
         if (!window) {
             cerr << "no window for you" << endl;
             glfwTerminate();
@@ -55,8 +56,7 @@ int main() {
     // keep running until someone closes the window
     while (!glfwWindowShouldClose(engine.window)) {
         engine.run();
-
-
+        
         glfwSwapBuffers(engine.window);
         glfwPollEvents();
     }
